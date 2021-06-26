@@ -11,6 +11,9 @@ body {
   line-height: 28px;
   font-weight: 400;
   font-family: "OpenSans", "Arial", sans-serif;
+  letter-spacing: -0.005em;
+  color: $mainColor;
+  min-width: 320px;
 }
 
 img {

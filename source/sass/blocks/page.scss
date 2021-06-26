@@ -1,0 +1,9 @@
+.page__header--nojs .navigation{
+  @media(max-width: $tablet) {
+    display: block;
+  }
+}
+
+.page__header--nojs .header__menu-button{
+  display: none;
+}

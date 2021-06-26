@@ -17,7 +17,7 @@
 
 <body class="page">
   <div class="wrapper">
-    <header class="header">
+    <header class="page__header--nojs header">
       <div class="header__container container">
         <div class="header__body">
           <button class="header__menu-button header__menu-button--closed" type="button">
@@ -26,16 +26,16 @@
           <nav class="header__navigation navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link" href="#">О нас</a>
+                <a class="navigation__link" href="#link1">О нас</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Виды велосипедов</a>
+                <a class="navigation__link" href="#link2">Виды велосипедов</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Видео про велосипеды</a>
+                <a class="navigation__link" href="#link3">Видео про велосипеды</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Контакты</a>
+                <a class="navigation__link" href="#link4">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -75,13 +75,13 @@
       <section class="about">
         <div class="about__container container">
           <div class="about__body">
-            <h2 class="about__title title">Несколько фактов о нас</h2>
+            <h2 class="about__title title" id="link1">Несколько фактов о нас</h2>
             <ol class="about__list">
               <li class="about__item">
                 Самый широкий выбор велосипедов!
               </li>
               <li class="about__item">
-                Доставка велосипедов по всей России<span>!<span>
+                Доставка велосипедов по всей России<span class="about__special">!<span>
               </li>
               <li class="about__item">
                 Большой выбор крутых аксессуаров!
@@ -96,9 +96,9 @@
       <section class="type">
         <div class="type__container container">
           <div class="type__body">
-            <h2 class="type__title title">Виды велосипедов</h2>
+            <h2 class="type__title title" id="link2">Виды велосипедов</h2>
             <ul class="type__list">
-              <li class="type__item">
+              <li class="type__item type__item--road">
                 <div class="type__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 1023px)"
@@ -111,7 +111,7 @@
                 </div>
                 <p class="type__text">Дорожный велосипед</p>
               </li>
-              <li class="type__item">
+              <li class="type__item type__item--mountain">
                 <div class="type__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 1023px)"
@@ -126,7 +126,7 @@
                 </div>
                 <p class="type__text">Горный велосипед</p>
               </li>
-              <li class="type__item">
+              <li class="type__item type__item--child">
                 <div class="type__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 1023px)"
@@ -147,7 +147,7 @@
       <section class="video">
         <div class="container">
           <div class="video__body">
-            <h2 class="video__title title">Видео про велосипеды</h2>
+            <h2 class="video__title title" id="link3">Видео про велосипеды</h2>
             <p class="video__text">
               В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.
             </p>
@@ -156,7 +156,11 @@
                 <picture>
                   <img src="img/video-bg-desktop.jpg" srcset="img/video-bg-desktop@2x.jpg 2x" alt="фото велосипеда">
                 </picture>
-                <button class="video__button" type="button"></button>
+                <button class="video__button" type="button">
+                  <svg width="65" height="65">
+                    <use xlink:href="img/sprite.svg#play-icon"></use>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -166,7 +170,7 @@
     <footer class="footer">
       <section class="contacts">
         <div class="contacts__content container">
-          <h2 class="contacts__title title">Как нас найти?</h2>
+          <h2 class="contacts__title title" id="link4">Как нас найти?</h2>
           <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         </div>
         <div class="contacts__map-wrapper" id="map">
@@ -181,11 +185,17 @@
           <ul class="contacts__list">
             <li class="contacts__item">
               <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru">
+                <svg width="26" height="20">
+                  <use xlink:href="img/sprite.svg#email-icon"></use>
+                </svg>
                 puteshestviemechta@gmail.ru
               </a>
             </li>
             <li class="contacts__item">
               <a class="contacts__link contacts__link--phone" href="tel:+749978468446">
+                <svg width="17" height="24">
+                  <use xlink:href="img/sprite.svg#phone-icon"></use>
+                </svg>
                 +7 (499) -784-684-46
               </a>
             </li>

@@ -55,6 +55,23 @@
   }
 }
 
+.video__content img {
+  object-fit: cover;
+  display: block;
+  max-width: 929px;
+  max-height: 522px;
+
+  @media (max-width: $tablet) {
+    max-width: 503px;
+    max-height: 282px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 288px;
+    max-height: 100%;
+  }
+}
+
 .video__content {
   position: absolute;
   width: 929px;
@@ -76,11 +93,6 @@
     height: 162px;
     bottom: -50px;
   }
-}
-
-.video__content img {
-  object-fit: cover;
-  display: block;
 }
 
 .video__button {

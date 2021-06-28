@@ -21,7 +21,7 @@ var menuButton = document.querySelector('.header__menu-button');
 var menu = document.querySelector('.navigation');
 var body = document.querySelector('.page');
 
-var nameInput = document.querySelector('input[type=text]');
+// var nameInput = document.querySelector('input[type=text]');
 var phone = document.querySelector('input[type=tel]');
 var form = document.querySelector('.form-order');
 
@@ -40,9 +40,9 @@ if (menuButton) {
   });
 }
 
-if (map) {
-  map.classList.add('contacts__map-wrapper--hide');
-}
+// if (map) {
+//   map.classList.add('contacts__map-wrapper--hide');
+// }
 
 if (smoothLinks) {
   smoothLinks.forEach(function (item) {
@@ -63,37 +63,30 @@ if (smoothLinks) {
   });
 }
 
-phone.addEventListener('change', function () {
-  if (phone.value === '') {
-    document.querySelector('.form-order__field--phone').classList.remove('form-order__field--error');
-  }
-})
-
 if (form) {
   form.addEventListener('submit', formSend);
 }
 
 function formSend(evt) {
-  evt.preventDefault();
 
   var error = formValidate(form);
 
-  if (error > 0) {
-    document.querySelector('.form-order__field--phone').classList.add('form-order__field--error');
-    phone.setCustomValidity('Тут должны быть только цифры');
-  } else {
+  if (!error) {
     document.querySelector('.form-order__field--phone').classList.remove('form-order__field--error');
-    nameInput.value = '';
-    phone.value = '';
+    form.reset();
   }
-
-  phone.reportValidity();
+  else {
+    document.querySelector('.form-order__field--phone').classList.add('form-order__field--error');
+    evt.preventDefault();
+  }
 }
 
 function formValidate() {
 
   if (phoneTest(phone)) {
-    return true
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -101,35 +94,35 @@ function phoneTest(input) {
   return !/^\d+$/.test(input.value);
 }
 
-if (document.querySelector('.contacts__map-wrapper')) {
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-      center: [59.938536, 30.323324],
-      zoom: 14
-    }),
+// if (document.querySelector('.contacts__map-wrapper')) {
+//   ymaps.ready(function () {
+//     var myMap = new ymaps.Map('map', {
+//       center: [59.938536, 30.323324],
+//       zoom: 14
+//     }),
 
-      // Создаём макет содержимого.
-      // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      //   '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      // ),
+//       // Создаём макет содержимого.
+//       // MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//       //   '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//       // ),
 
-      myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
-        hintContent: "Магазин велосипедов",
-        balloonContent: "г. Санкт-Петербург, ул. Большая Конюшенная"
-      }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: "default#image",
-        // Своё изображение иконки метки.
-        // iconImageHref: "img/map-pin.svg",
-        // Размеры метки.
-        // iconImageSize: [67, 100],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        // iconImageOffset: [-30, -100]
-      });
+//       myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {
+//         hintContent: "Магазин велосипедов",
+//         balloonContent: "г. Санкт-Петербург, ул. Большая Конюшенная"
+//       }, {
+//         // Опции.
+//         // Необходимо указать данный тип макета.
+//         iconLayout: "default#image",
+//         // Своё изображение иконки метки.
+//         // iconImageHref: "img/map-pin.svg",
+//         // Размеры метки.
+//         // iconImageSize: [67, 100],
+//         // Смещение левого верхнего угла иконки относительно
+//         // её "ножки" (точки привязки).
+//         // iconImageOffset: [-30, -100]
+//       });
 
-    myMap.geoObjects
-      .add(myPlacemark)
-  });
-}
+//     myMap.geoObjects
+//       .add(myPlacemark)
+//   });
+// }

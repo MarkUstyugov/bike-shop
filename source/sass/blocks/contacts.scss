@@ -69,9 +69,17 @@
 
 .contacts__map-wrapper img {
   display: block;
+  max-width: 957px;
+  height: 530px;
+  object-fit: contain;
+
+  @media (max-width: $tablet) {
+    max-width: 698px;
+    height: 545px;
+  }
 
   @media (max-width: $mobile) {
-    max-width: 100%;
+    max-width: 320px;
     height: 250px;
   }
 }

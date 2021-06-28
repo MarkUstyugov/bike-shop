@@ -17,7 +17,7 @@
 
 <body class="page">
   <div class="wrapper">
-    <header class="page__header--nojs header">
+    <header class="page__header page__header--nojs header">
       <div class="header__container container">
         <div class="header__body">
           <button class="header__menu-button header__menu-button--closed" type="button">
@@ -81,7 +81,7 @@
                 Самый широкий выбор велосипедов!
               </li>
               <li class="about__item">
-                Доставка велосипедов по всей России<span class="about__special">!<span>
+                Доставка велосипедов по всей России<span class="about__special">!</span>
               </li>
               <li class="about__item">
                 Большой выбор крутых аксессуаров!
@@ -101,12 +101,11 @@
               <li class="type__item type__item--road">
                 <div class="type__image">
                   <picture>
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/type-road-tablet.jpg 1x, img/type-road-tablet@2x.jpg 2x">
-                    <source type="image/webp" srcset="img/type-road-desktop.jpg 1x, img/type-road-desktop@2x.jpg 2x">
-                    <source media="(max-width: 1023px)"
-                      srcset="img/type-road-tablet.jpg 1x, img/type-road-tablet@2x.jpg 2x">
-                    <img src="img/type-road-desktop.jpg" srcset="img/type-road-desktop@2x.jpg 2x" alt="фото велосипеда">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/type-road-tablet.webp 1x, img/type-road-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/type-road-desktop.webp 1x, img/type-road-desktop@2x.webp 2x">
+                    <source media="(max-width: 1023px)" srcset="img/type-road-tablet.jpg 1x, img/type-road-tablet@2x.jpg 2x">
+                    <img src="img/type-road-desktop.jpg" srcset="img/type-road-desktop@2x.jpg 2x"
+                      alt="фото велосипеда" width="342" height="503">
                   </picture>
                 </div>
                 <p class="type__text">Дорожный велосипед</p>
@@ -114,14 +113,11 @@
               <li class="type__item type__item--mountain">
                 <div class="type__image">
                   <picture>
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/type-mountain-tablet.jpg 1x, img/type-mountain-tablet@2x.jpg 2x">
-                    <source type="image/webp"
-                      srcset="img/type-mountain-desktop.jpg 1x, img/type-mountain-desktop@2x.jpg 2x">
-                    <source media="(max-width: 1023px)"
-                      srcset="img/type-mountain-tablet.jpg 1x, img/type-mountain-tablet@2x.jpg 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/type-mountain-tablet.webp 1x, img/type-mountain-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/type-mountain-desktop.webp 1x, img/type-mountain-desktop@2x.webp 2x">
+                    <source media="(max-width: 1023px)" srcset="img/type-mountain-tablet.jpg 1x, img/type-mountain-tablet@2x.jpg 2x">
                     <img src="img/type-mountain-desktop.jpg" srcset="img/type-mountain-desktop@2x.jpg 2x"
-                      alt="фото велосипеда">
+                      alt="фото велосипеда" width="342" height="503">
                   </picture>
                 </div>
                 <p class="type__text">Горный велосипед</p>
@@ -129,13 +125,11 @@
               <li class="type__item type__item--child">
                 <div class="type__image">
                   <picture>
-                    <source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/type-child-tablet.jpg 1x, img/type-child-tablet@2x.jpg 2x">
-                    <source type="image/webp" srcset="img/type-child-desktop.jpg 1x, img/type-child-desktop@2x.jpg 2x">
-                    <source media="(max-width: 1023px)"
-                      srcset="img/type-child-tablet.jpg 1x, img/type-child-tablet@2x.jpg 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/type-child-tablet.webp 1x, img/type-child-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/type-child-desktop.webp 1x, img/type-child-desktop@2x.webp 2x">
+                    <source media="(max-width: 1023px)" srcset="img/type-child-tablet.jpg 1x, img/type-child-tablet@2x.jpg 2x">
                     <img src="img/type-child-desktop.jpg" srcset="img/type-child-desktop@2x.jpg 2x"
-                      alt="фото велосипеда">
+                      alt="фото велосипеда" width="342" height="503">
                   </picture>
                 </div>
                 <p class="type__text">Детский велосипед</p>
@@ -154,6 +148,7 @@
             <div class="video__content-body">
               <div class="video__content">
                 <picture>
+                  <source type="image/webp" srcset="img/video-bg-desktop.webp 1x, img/video-bg-desktop@2x.webp 2x">
                   <img src="img/video-bg-desktop.jpg" srcset="img/video-bg-desktop@2x.jpg 2x" alt="фото велосипеда">
                 </picture>
                 <button class="video__button" type="button">
@@ -175,31 +170,34 @@
         </div>
         <div class="contacts__map-wrapper" id="map">
           <picture>
-            <source media="(max-width: 767px)" srcset="img/map-mobile.png">
-            <source media="(max-width: 1023px)" srcset="img/map-tablet.png">
-            <img src="img/map-desktop.png" alt="Наш адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19"
-              width="957" height="530">
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x">
+            <img src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x"
+              alt="Наш адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
           </picture>
         </div>
-        <div class="contacts__bottom contacts__container">
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru">
-                <svg width="26" height="20">
-                  <use xlink:href="img/sprite.svg#email-icon"></use>
-                </svg>
-                puteshestviemechta@gmail.ru
-              </a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--phone" href="tel:+749978468446">
-                <svg width="17" height="24">
-                  <use xlink:href="img/sprite.svg#phone-icon"></use>
-                </svg>
-                +7 (499) -784-684-46
-              </a>
-            </li>
-          </ul>
+        <div class="contacts__bottom">
+          <div class="contacts__email">
+            <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru">
+              <svg width="26" height="20">
+                <use xlink:href="img/sprite.svg#email-icon"></use>
+              </svg>
+              puteshestviemechta@gmail.ru
+            </a>
+          </div>
+          <div class="contacts__phone">
+            <a class="contacts__link contacts__link--phone" href="tel:+749978468446">
+              <svg width="17" height="24">
+                <use xlink:href="img/sprite.svg#phone-icon"></use>
+              </svg>
+              +7 (499) -784-684-46
+            </a>
+          </div>
         </div>
       </section>
     </footer>

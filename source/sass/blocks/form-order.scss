@@ -11,10 +11,24 @@
   font-size: 15px;
   line-height: 24px;
 
+  &:hover {
+    border: 3px solid $greenColor;
+    padding: 14px 27px 10px;
+  }
+
   &::placeholder {
+    font-family: "OpenSans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 24px;
     color: rgba(#1c1c1c, 0.5);
+  }
+
+  @media(max-width: $tablet) {
+    padding: 14px 21px 10px;
+  }
+
+  @media(max-width: $mobile) {
+    padding: 14px 26px 10px;
   }
 }
 
@@ -26,11 +40,21 @@
   border: none;
   background-color: $greenColor;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 21px;
   letter-spacing: 0px;
   width: 100%;
   height: 51px;
   border-radius: 6px;
   cursor: pointer;
+
+  &:hover {
+    color: $whiteColor;
+    background-color:#46C1AE;
+  }
+
+  &:active {
+    color: $whiteColor;
+    background-color: rgba(#46C1AE, 0.6);
+  }
 }

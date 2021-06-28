@@ -21,10 +21,15 @@ var menuButton = document.querySelector('.header__menu-button');
 var menu = document.querySelector('.navigation');
 var body = document.querySelector('.page');
 
+var nameInput = document.querySelector('input[type=text]');
 var phone = document.querySelector('input[type=tel]');
 var form = document.querySelector('.form-order');
 
 var smoothLinks = document.querySelectorAll('a[href^="#link"]');
+
+if (pageHeader) {
+  pageHeader.classList.remove('page__header--nojs');
+}
 
 if (menuButton) {
   menuButton.addEventListener('click', function (evt) {
@@ -33,10 +38,6 @@ if (menuButton) {
     menu.classList.toggle('navigation--active');
     body.classList.toggle('scroll-lock');
   });
-}
-
-if (pageHeader) {
-  pageHeader.classList.remove('page__header--nojs');
 }
 
 if (map) {
@@ -62,6 +63,12 @@ if (smoothLinks) {
   });
 }
 
+phone.addEventListener('change', function () {
+  if (phone.value === '') {
+    document.querySelector('.form-order__field--phone').classList.remove('form-order__field--error');
+  }
+})
+
 if (form) {
   form.addEventListener('submit', formSend);
 }
@@ -73,23 +80,25 @@ function formSend(evt) {
 
   if (error > 0) {
     document.querySelector('.form-order__field--phone').classList.add('form-order__field--error');
+    phone.setCustomValidity('Тут должны быть только цифры');
   } else {
     document.querySelector('.form-order__field--phone').classList.remove('form-order__field--error');
+    nameInput.value = '';
+    phone.value = '';
   }
+
+  phone.reportValidity();
 }
 
 function formValidate() {
-  var error = 0;
 
   if (phoneTest(phone)) {
-    error++;
+    return true
   }
-
-  return error;
 }
 
 function phoneTest(input) {
-  return !/[1-9]/.test(input.value);
+  return !/^\d+$/.test(input.value);
 }
 
 if (document.querySelector('.contacts__map-wrapper')) {

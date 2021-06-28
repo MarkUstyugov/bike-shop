@@ -24,7 +24,11 @@
   }
 }
 
-.type__title {
+.type__body h2{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: #1f1f1f;
   text-align: center;
   margin: 0 0 50px 0;
 
@@ -104,7 +108,7 @@
   }
 }
 
-.type__text {
+.type__item p{
   text-align: center;
   font-weight: 600;
   font-size: 22px;

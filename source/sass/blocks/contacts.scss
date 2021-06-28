@@ -20,7 +20,11 @@
   }
 }
 
-.contacts__title {
+.contacts__content h2{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: #1f1f1f;
   margin: 0 0 30px 0;
 
   @media (max-width: $tablet) {
@@ -35,7 +39,7 @@
   }
 }
 
-.contacts__text {
+.contacts__content p{
   font-size: 17px;
   line-height: 31px;
   color: rgba($mainColor, 0.7);

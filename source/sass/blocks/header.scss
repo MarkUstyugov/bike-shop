@@ -136,7 +136,7 @@
   }
 }
 
-.header__title {
+.header__content-inner h1{
   font-weight: 700;
   font-size: 46px;
   line-height: 64px;
@@ -156,7 +156,7 @@
   }
 }
 
-.header__text {
+.header__content-inner p{
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
@@ -191,7 +191,7 @@
   }
 }
 
-.header__form-title {
+.header__form p{
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;

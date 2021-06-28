@@ -24,7 +24,10 @@
   }
 }
 
-.video__title {
+.video__body h2{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
   text-align: center;
   color: $whiteColor;
   margin: 0 0 20px 0;
@@ -35,7 +38,7 @@
   }
 }
 
-.video__text {
+.video__body p{
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;

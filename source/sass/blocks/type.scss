@@ -61,11 +61,17 @@
   }
 }
 
+.type__image {
+  position: relative;
+}
+
 .type__image img {
   text-align: center;
   display: block;
   object-fit: contain;
   background-color: $greenColor;
+  border-radius: 10px;
+  object-fit: cover;
 
   @media(max-width: $tablet) {
     width: 270px;
@@ -116,11 +122,6 @@
   color: #000000;
   margin: 20px 0 0 0;
   padding: 0 8px;
-}
-
-.type__image {
-  position: relative;
-  border-radius: 10px;
 }
 
 .type__item--road .type__image {

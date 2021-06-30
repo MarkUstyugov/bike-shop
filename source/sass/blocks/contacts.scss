@@ -75,7 +75,7 @@
   display: block;
   max-width: 957px;
   height: 530px;
-  object-fit: contain;
+  object-fit: cover;
 
   @media (max-width: $tablet) {
     max-width: 698px;
@@ -136,7 +136,7 @@
   color: rgba($mainColor, 0.5);
   font-size: 16px;
   line-height: 22px;
-  display: inline-block;
+  display: block;
   position: relative;
   padding-left: 43px;
 

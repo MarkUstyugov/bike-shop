@@ -1,7 +1,8 @@
 .video {
   background-color: #131314;
   min-height: 706px;
-  position: relative;
+  padding: 0 0 248px 0;
+  // position: relative;
 
   @media (max-width: $tablet) {
     min-height: 413px;
@@ -46,6 +47,7 @@
   margin: 0 auto;
   width: 340px;
   text-align: center;
+  padding: 0 0 56px 0;
 
   @media (max-width: $tablet) {
     width: 430px;
@@ -56,6 +58,10 @@
     font-size: 16px;
     line-height: 28px;
   }
+}
+
+.video__content-body {
+  position: relative;
 }
 
 .video__content img {
@@ -80,7 +86,7 @@
   width: 929px;
   height: 522px;
   background-color: #000000;
-  bottom: -99px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   background-color: $greyColor;

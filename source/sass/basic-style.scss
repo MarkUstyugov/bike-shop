@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -14,6 +15,16 @@ body {
   letter-spacing: -0.005em;
   color: $mainColor;
   min-width: 320px;
+
+  overflow-x: scroll;
+
+  @media (max-width: $tablet) {
+    overflow-x: none;
+  }
+
+  @media (max-width: $mobile) {
+    overflow-x: none;
+  }
 }
 
 img {

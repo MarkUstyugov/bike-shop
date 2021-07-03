@@ -1,6 +1,7 @@
 .navigation {
   border-bottom: 1px solid rgba($whiteColor, 0.2);
 
+
   @media (max-width: $tablet) {
     border: none;
     display: none;
@@ -41,6 +42,10 @@
 
   @media (max-width: $tablet) {
     margin: 0 0 30px 0;
+
+    &:last-child{
+      margin: 0 0 30px 0;
+    }
   }
 }
 

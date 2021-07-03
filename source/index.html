@@ -143,21 +143,19 @@
           <div class="video__body">
             <h2 id="link3">Видео про велосипеды</h2>
             <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-            <div class="video__content-body">
-              <div class="video__content">
-                <picture>
-                  <!-- 1х: 929px; 2x: 1858px -->
-                  <source type="image/webp" srcset="img/video-bg-desktop.webp 1x, img/video-bg-desktop@2x.webp 2x">
-                  <!-- 1х: 929px; 2x: 1858px -->
-                  <img src="img/video-bg-desktop.jpg" srcset="img/video-bg-desktop@2x.jpg 2x" alt="фото велосипеда"
-                    width="929" height="522">
-                </picture>
-                <button class="video__button" type="button">
-                  <svg width="65" height="65">
-                    <use xlink:href="img/sprite.svg#play-icon"></use>
-                  </svg>
-                </button>
-              </div>
+            <div class="video__content">
+              <picture>
+                <!-- 1х: 929px; 2x: 1858px -->
+                <source type="image/webp" srcset="img/video-bg-desktop.webp 1x, img/video-bg-desktop@2x.webp 2x">
+                <!-- 1х: 929px; 2x: 1858px -->
+                <img src="img/video-bg-desktop.jpg" srcset="img/video-bg-desktop@2x.jpg 2x" alt="фото велосипеда"
+                  width="929" height="522">
+              </picture>
+              <button class="video__button" type="button" aria-label="Кнопка запуска видео">
+                <svg width="65" height="65">
+                  <use xlink:href="img/sprite.svg#play-icon"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -183,8 +181,9 @@
               alt="Наш адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19" width="957" height="530">
           </picture>
         </div>
+
         <div class="contacts__bottom">
-          <div class="contacts__email">
+          <div class="contacts__bottom-item contacts__email">
             <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru">
               <svg width="26" height="20">
                 <use xlink:href="img/sprite.svg#email-icon"></use>
@@ -192,7 +191,7 @@
               puteshestviemechta@gmail.ru
             </a>
           </div>
-          <div class="contacts__phone">
+          <div class="contacts__bottom-item contacts__phone">
             <a class="contacts__link contacts__link--phone" href="tel:+749978468446">
               <svg width="17" height="24">
                 <use xlink:href="img/sprite.svg#phone-icon"></use>
@@ -201,6 +200,7 @@
             </a>
           </div>
         </div>
+
       </section>
     </footer>
   </div>

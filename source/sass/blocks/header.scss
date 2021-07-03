@@ -46,8 +46,9 @@
   height: 50px;
   border: 0;
   cursor: pointer;
-
+  z-index: 4;
   background-color: transparent;
+  padding: 0;
 
   &::before {
     content: "";
@@ -57,7 +58,7 @@
     transform: translate(-50%, -50%);
     width: 22px;
     height: 23px;
-    background-image: url("../../img/icons/close-icon.svg");
+    background-image: url("../img/icons/close-icon.svg");
   }
 
   @media (max-width: $tablet) {
@@ -100,7 +101,7 @@
   @media (max-width: $tablet) {
     width: auto;
     background-color: $mainColor;
-    background-image: url("../../img/bg-header-tablet.jpg");
+    background-image: url("../img/bg-header-tablet.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -109,7 +110,7 @@
   }
 
   @media (max-width: 400px) {
-    background-image: url("../../img/bg-header-mobile.jpg");
+    background-image: url("../img/bg-header-mobile.jpg");
     min-height: 390px;
   }
 }

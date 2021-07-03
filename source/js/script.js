@@ -72,5 +72,5 @@ function formValidate() {
 }
 
 function phoneTest(input) {
-  return !/^\d+$/.test(input.value);
+  return !/^(\+|\d)\d+$/.test(input.value);
 }
